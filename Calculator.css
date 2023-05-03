@@ -1,0 +1,140 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* background: linear-gradient(145deg, lightblue, teal); */
+    background: url(https://img.freepik.com/premium-photo/top-view-blue-calculator-notepad-color-background_260672-4055.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+}
+
+#_load{
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#_load > span:first-child{
+    animation: span1 ease-out alternate infinite 700ms;
+}
+#_load > span:last-child{
+    animation: span2 ease-in alternate infinite 700ms;
+}
+@keyframes span1 {
+    0%{
+        font-size: 15rem;
+    } 100%{
+        font-size: 10rem;
+    }
+}
+@keyframes span2 {
+    0%{
+        font-size: 10rem;
+    } 100%{
+        font-size: 15rem;
+    }
+}
+
+main{
+    /* display: grid;
+    place-items: center; */
+    /* height: 80%;*/
+    /* width: 500px; */
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    user-select: none;
+    /* margin: auto 0; */
+}
+
+.blackGlass{
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.25);
+}
+
+.whiteGlass{
+    background: rgba(225,225,225,0.5);
+    border: 1px solid rgba(225,225,225,0.25);
+}
+
+.div1{
+    position: relative;
+    width: calc(5rem + 5rem + 5rem + 5rem + 1.5rem + 2rem);
+    overflow: scroll;
+    height: 130px;
+    border-radius: 20px;
+}
+
+.whiteBS{
+    box-shadow: 1px 19px 0px -17px rgba(255,255,255,1);
+}
+
+.blackBS{
+    box-shadow: 1px 19px 0px -17px rgba(0,0,0,1);
+}
+
+.div1 p{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    height: 100%;
+    font-size: clamp(3rem, (1rem + 10vh), 1rem);
+}
+
+.div1::-webkit-scrollbar{
+    display: none;
+}
+
+.bg{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.whitebBS{
+    box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+}
+
+.blackbBS{
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,1);
+}
+
+.div2{
+    color: black;
+}
+
+.div2 div{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+}
+
+#_span{
+    min-width: calc(10rem + .5rem);
+    grid-column: span 2;
+}
+
+button{
+    height: 5rem !important;
+    width: 5rem !important;
+}
+button:active{
+    transform: scale(0.8);
+    box-shadow: 0px 0px 60px 6px rgba(0,0,0,0.53) inset;
+}
+
+.ctext{
+    color: black;
+}

@@ -101,7 +101,7 @@ button[16].onclick = () => {
 }
 button[17].onclick = () => {
     try {
-        Viewp.innerHTML = Viewp.innerHTML == "" ? "" : Math.round(eval(Viewp.getInnerHTML()))
+        Viewp.innerHTML = Viewp.innerHTML == "" ? "" : eval(Viewp.getInnerHTML())
 
     } catch (error) {
         // Viewp.classList.add("text-danger")

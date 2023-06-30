@@ -121,7 +121,7 @@ main{
     gap: .5rem;
 }
 
-#_span{
+.-span{
     min-width: calc(10rem + .5rem);
     grid-column: span 2;
 }

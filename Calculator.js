@@ -48,6 +48,30 @@ bgToggle.onclick = (e) => {
     }
 }
 
+document.addEventListener("keydown", (e) => {
+    button.forEach(btn => {
+        if(e.key == btn.dataset.val){
+            btn.focus()
+            if(btn.dataset.val == "Escape"){
+                Viewp.innerHTML = ""
+            } else if(btn.dataset.val == "Backspace"){
+                Viewp.innerHTML = Viewp.getInnerHTML().toString().slice(0, -1)
+            } else if(btn.dataset.val == "Enter"){
+                try {
+                    Viewp.innerHTML = Viewp.innerHTML == "" ? "" : Math.round(eval(Viewp.getInnerHTML()))
+            
+                } catch (error) {
+                    // Viewp.classList.add("text-danger")
+                    // Viewp.style.fontSize = "2rem"
+                    Viewp.innerHTML = '<p class="text-danger" style="font-size: 2rem;">Invalid math function</p>'
+                }
+            } else{
+                Viewp.append(btn.dataset.val)
+            }
+        }
+    })
+})
+
 button[0].onclick = (e) => {
     Viewp.innerHTML = ""
 }
@@ -101,7 +125,7 @@ button[16].onclick = () => {
 }
 button[17].onclick = () => {
     try {
-        Viewp.innerHTML = Viewp.innerHTML == "" ? "" : eval(Viewp.getInnerHTML())
+        Viewp.innerHTML = Viewp.innerHTML == "" ? "" : Math.round(eval(Viewp.getInnerHTML()))
 
     } catch (error) {
         // Viewp.classList.add("text-danger")
